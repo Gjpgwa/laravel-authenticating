@@ -2,7 +2,7 @@
 
 namespace Gjpgwa\Authenticating;
 
-use Gwagjp\Authenticating\AuthenticatingClient;
+use Gjpgwa\Authenticating\AuthenticatingClient;
 use Config;
 
 class Authenticating {

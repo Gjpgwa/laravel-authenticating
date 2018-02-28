@@ -3,7 +3,7 @@
 namespace Gjpgwa\Authenticating;
 
 use GuzzleHttp\Client;
-use Gwagjp\Authenticating\AuthenticatingValidate;
+use Gjpgwa\Authenticating\AuthenticatingValidate;
 
 class AuthenticatingClient
 {
