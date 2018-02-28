@@ -9,7 +9,7 @@ return array(
     |
 	  |
 	  */
-    'authKey' => 'YOUR-USER-AUTH-KEY'
+    'authKey' => 'YOUR-USER-AUTH-KEY',
 
     /*
     |--------------------------------------------------------------------------
