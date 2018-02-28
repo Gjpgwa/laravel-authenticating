@@ -1,6 +1,6 @@
 {
   "name": "gjpgwa/laravel-authenticating",
-  "description": "Authenticatin.com Wrapper Laravel",
+  "description": "Authenticating.com Wrapper Laravel",
   "keywords": ["authenticating.com", "laravel", "laravel 5"],
   "type": "library",
   "require": {

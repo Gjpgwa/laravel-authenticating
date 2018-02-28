@@ -1,6 +1,6 @@
 <?php
 
-namespace Gwagjp\Authenticating;
+namespace Gjpgwa\Authenticating;
 
 
 class authenticatingFaker {
