@@ -63,7 +63,6 @@ class AuthenticatingValidate {
             'email'    => 'The :attribute must be an email address.',
             'alpha'     => 'The :attribute must be letter characters.',
             'alpha_num' => 'The :attribute must be letters and numbers.',
-            'alpha_dash' => 'The :attribute must be a Base64 encoded image.',
             'size'  => 'The :attribute must be exactly :size characters.',
         ];
         return $this->_validate($payload, $rules, $messages);
@@ -118,13 +117,12 @@ class AuthenticatingValidate {
     private function comparePhotos($payload) {
         $rules = [
             'accessCode' => 'required|numeric',
-            'img1' => 'required|alpha_dash',
-            'img2' => 'required|alpha_dash'
+            'img1' => 'required',
+            'img2' => 'required'
         ];
         $messages = [
             'required'    => 'The :attribute is required.',
-            'numeric'    => 'The :attribute must be a number.',
-            'alpha_dash' => 'The :attribute must be a Base64 encoded image.',
+            'numeric'    => 'The :attribute must be a number.'
         ];
         return $this->_validate($payload, $rules, $messages);
     }
@@ -133,13 +131,12 @@ class AuthenticatingValidate {
     private function uploadID($payload) {
         $rules = [
             'accessCode' => 'required|numeric',
-            'idFront'   => 'required|alpha_dash',
-            'idBack'   => 'required|alpha_dash',
+            'idFront'   => 'required',
+            'idBack'   => 'required',
         ];
         $messages = [
             'required'    => 'The :attribute is required.',
-            'numeric'    => 'The :attribute must be a number.',
-            'alpha_dash' => 'The :attribute must be a Base64 encoded image.',
+            'numeric'    => 'The :attribute must be a number.'
         ];
         return $this->_validate($payload, $rules, $messages);
     }
