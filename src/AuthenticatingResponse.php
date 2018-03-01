@@ -50,6 +50,8 @@ class AuthenticatingResponse {
             return response()->json(["error" => ['response'=>$response, 'message'=>'Request failed']],$response->code);
         else if(isset($response->hasError) && $response->hasError == 'false')
             return response()->json(["success" => ['response'=>$response, 'message'=>$response->data->description]],$response->code);
+        else if(isset($response->error) && $response->error == 'false')
+            return response()->json(["success" => ['response'=>$response, 'message'=>$response->data->description]],$response->code);
         else
             return response()->json(["error" => ['response'=>$response, 'message'=>'Unknown response']],$response->code);
     }
