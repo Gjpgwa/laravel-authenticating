@@ -43,15 +43,15 @@ class AuthenticatingValidate {
             'accessCode' => 'required|numeric',
             'email' => 'nullable|email',
             'phone' => 'nullable|numeric',
-            'firstName' => 'nullable|alpha',
-            'lastName' => 'nullable|alpha',
-            'address' => 'nullable|alpha_num',
+            'firstName' => 'nullable',
+            'lastName' => 'nullable',
+            'address' => 'nullable',
             'city' => 'nullable',
             'state' => 'nullable',
             'street' => 'nullable',
             'province' => 'nullable|alpha|size:2',
-            'buildingNumber' => 'nullable|alpha_num',
-            'zipCode' => 'nullable|alpha_num',
+            'buildingNumber' => 'nullable',
+            'zipCode' => 'nullable',
             'month' => 'nullable|numeric',
             'day' => 'nullable|numeric',
             'year' => 'nullable|numeric',
@@ -220,9 +220,9 @@ class AuthenticatingValidate {
 
     private function createUser($payload) {
         $rules = [
-            'companyId' => 'required|alpha_dash',
-            'firstName' => 'required|alpha',
-            'lastName' => 'required|alpha',
+            'companyId' => 'required',
+            'firstName' => 'required',
+            'lastName' => 'required',
             'email' => 'required|email',
             'phone' => 'required|numeric',
             'country' => 'required|in:CAN,USA'
@@ -241,7 +241,7 @@ class AuthenticatingValidate {
 
     private function setAvailableNetworks($payload) {
         $rules = [
-            'companyId' => 'required|alpha_dash',
+            'companyId' => 'required',
             'networks.*'  => 'required|in:facebook,twitter,instagram'
         ];
         $messages = [
@@ -254,7 +254,7 @@ class AuthenticatingValidate {
 
     private function setContactRequired($payload) {
         $rules = [
-            'companyId' => 'required|alpha_dash',
+            'companyId' => 'required',
             'isPhoneRequired'  => 'required|boolean',
             'isEmailRequired'  => 'required|boolean'
         ];
@@ -269,7 +269,7 @@ class AuthenticatingValidate {
 
     private function setPhotoMatchPercent($payload) {
         $rules = [
-            'companyId' => 'required|alpha_dash',
+            'companyId' => 'required',
             'percent'  => 'required|numeric'
         ];
         $messages = [
@@ -282,7 +282,7 @@ class AuthenticatingValidate {
 
     private function setDaysToExpire($payload) {
         $rules = [
-            'companyId' => 'required|alpha_dash',
+            'companyId' => 'required',
             'days'  => 'required|numeric'
         ];
         $messages = [
@@ -295,7 +295,7 @@ class AuthenticatingValidate {
 
     private function getTestResult($payload) {
         $rules = [
-            'companyId' => 'required|alpha_dash',
+            'companyId' => 'required',
             'accessCode'  => 'required|numeric'
         ];
         $messages = [
